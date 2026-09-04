@@ -152,6 +152,18 @@ body {
     opacity: 0.6;
 }
 
+.projects-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.project-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
 .project-card {
     background-color: var(--bg-card);
     border: 1px solid var(--border-color);
