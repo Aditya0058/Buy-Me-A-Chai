@@ -3,10 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buy me a Chai</title>
+    <title>Buy me a Chai | Support Aditya Rajput</title>
     <link rel="icon" type="image/png" href="Assets/favicon.png">
+
+    <!-- Font Awesome for Social Logos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
+    <header class="site-header">
+        <div class="logo">
+            <i class="fa-solid fa-mug-hot" style="color: var(--accent-gold);"></i>
+            Buy Me a Chai
+        </div>
+        <a href="https://github.com/Aditya0058/Buy-Me-A-Chai" target="_blank" class="btn-create">Create your support page</a>
+    </header>
+
+    <main class="main-container">
+        <!-- Left Column: Profile & Projects -->
+        <section class="profile-col">
+            <div class="user-profile">
+                <img src="Assets/avatar.png" alt="Aditya Rajput" class="avatar" onerror="this.src='https://ui-avatars.com/api/?name=Aditya+Rajput&background=D4AF37&color=1A1614'">
+                <h1 class="user-name">Aditya Rajput</h1>
+                <p class="user-tagline">1st year BE/Btech Student & Open Source Enthusiast 🚀</p>
+
+                <div class="social-links">
+                    <a href="https://github.com/Aditya0058" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://x.com/AdityaRajp7274" target="_blank" title="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/aditya-rajput-9468b8421/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://wa.me/918446585968" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+
+                <div class="user-bio">
+                    <p>I'm a 1st year BE/Btech student passionate about building open-source tools and sharing knowledge. If my work saved you an afternoon, a chai is a lovely way to say thanks.</p>
+                </div>
+            </div>
+
+            <div class="projects-section">
+                <h2>Things I Make</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <img src="Assets/herbal-tea.png" alt="Herbal Tea Project" style="width: 100%; border-radius: 10px; margin-bottom: 1rem;" onerror="this.style.display='none'">
+                        <h3>My side project</h3>
+                        <p>A thing I built and wrote about. There is room for a couple of sentences here, so say what it actually does and who it is for.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Right Column: Payment Interface -->
+        <section class="payment-col">
+            <div class="payment-box">
+                <p style="font-size: 0.7rem; color: var(--accent-gold); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem;">0% Commission — Straight to UPI</p>
+                <h3>Buy me a chai</h3>
+
+                <div class="amount-chips">
+                    <button class="chip active" data-amount="20">
+                        <i class="fa-solid fa-mug-hot"></i>
+                        <span>Cutting chai<br><strong>₹20</strong></span>
+                    </button>
+                    <button class="chip" data-amount="50">
+                        <i class="fa-solid fa-mug-saucer"></i>
+                        <span>Chai for me<br>and you <strong>₹50</strong></span>
+                    </button>
+                    <button class="chip" data-amount="100">
+                        <i class="fa-solid fa-cookie-bite"></i>
+                        <span>2 chai + chips<br><strong>₹100</strong></span>
+                    </button>
+                </div>
+
+                <div class="custom-amount">
+                    <label>Or enter your own amount</label>
+                    <div class="input-group">
+                        <span>₹</span>
+                        <input type="number" id="custom-amount-input" placeholder="Amount in ₹">
+                    </div>
+                </div>
+
+                <div class="message-box">
+                    <label>Message (optional) <span style="float: right; font-size: 0.7rem;" id="char-count">0/60</span></label>
+                    <textarea id="user-message" placeholder="Chai for your work" maxlength="60"></textarea>
+                </div>
+            </div>
+
+            <div class="result-card">
+                <div class="amount-display">
+                    ₹<span id="res-amount">20</span>
+                </div>
+
+                <div class="upi-section">
+                    <div class="upi-id-badge" id="res-upi">8446585968@fam</div>
+                </div>
+
+                <div class="qr-section">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=upi://pay?pa=8446585968@fam%26am=20" alt="Payment QR Code">
+                    <div style="color: var(--text-secondary); font-size: 0.75rem; margin-bottom: 1.5rem;">
+                        Scan with any UPI app — GPay, PhonePe, Paytm, BHIM.
+                    </div>
+                    <div class="actions">
+                        <button class="btn-action" id="copy-upi">
+                            <i class="fa-regular fa-copy"></i> Copy UPI ID
+                        </button>
+                        <button class="btn-action" id="save-qr">
+                            <i class="fa-solid fa-download"></i> Save QR
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>
+            Powered by <a href="#">buy-me-a-chai</a> |
+            Support <a href="#">Aditya Rajput</a>
+        </p>
+        <p style="margin-top: 0.5rem; opacity: 0.6; font-size: 0.7rem;">
+            Self-hosted • 0% commission. Payments go directly to the creator's UPI. No middleman, no fees.
+        </p>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
 </body>
 </html>
