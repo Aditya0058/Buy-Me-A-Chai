@@ -1,0 +1,18 @@
+# What should me different for different users
+1. L6 - title should be Buy me a Chai | Support for {{name}}
+
+2. L20 - there should be create your own page targetting to my this ongoing page so that users watching support page of other users can also come to my create support page system 
+
+3. L29 - If user don't upoad thier pic they should get thier name user profile 
+
+4. L30 - Username  change
+
+5. L31 - tagline change
+
+6. L34 - L37 - social link should be different
+
+7. L41 - different bio
+
+8. for create you own page - i am not going to add projects section for them 
+
+9. L109 - there should be different upi id

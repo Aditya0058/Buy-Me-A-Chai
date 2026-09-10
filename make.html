@@ -4,8 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Make your own Support page</title>
+    <link rel="stylesheet" href="make.css">
 </head>
 <body>
-    
+    <div class="form">
+        <form id="generator-form" class="form-container">
+            <h1>Support page Generator</h1>
+
+            <!-- Profile Section -->
+            <div class="form-section">
+                <h2>Profile Information</h2>
+                <div class="input-group">
+                    <label for="user-name">Full Name</label>
+                    <input type="text" id="user-name" placeholder="e.g. Aditya Rajput" required>
+                </div>
+                <div class="input-group">
+                    <label for="user-tagline">Tagline</label>
+                    <input type="text" id="user-tagline" placeholder="e.g. B.Tech Student & Creator">
+                </div>
+                <div class="input-group">
+                    <label for="user-bio">Short Bio</label>
+                    <textarea id="user-bio" placeholder="Tell people why they should support you..."></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="user-avatar">Avatar Image URL</label>
+                    <input type="url" id="user-avatar" placeholder="https://example.com/my-photo.jpg">
+                </div>
+            </div>
+
+            <!-- Social Section -->
+
+            <div class="form-section">
+                <h2>Social Links</h2>
+                <div class="input-group">
+                    <label for="link-github">GitHub URL</label>
+                    <input type="url" id="link-github" placeholder="https://github.com/username">
+                </div>
+                <div class="input-group">
+                    <label for="link-x">X (Twitter) URL</label>
+                    <input type="url" id="link-x" placeholder="https://x.com/username">
+                </div>
+                <div class="input-group">
+                    <label for="link-linkedin">LinkedIn URL</label>
+                    <input type="url" id="link-linkedin" placeholder="https://linkedin.com/in/username">
+                </div>
+                <div class="input-group">
+                    <label for="link-whatsapp">WhatsApp Number</label>
+                    <input type="text" id="link-whatsapp" placeholder="e.g. 918446585968">
+                </div>
+            </div>
+            <!-- PAYMENT SECTION -->
+            <div class="form-section">
+                <h2>Payment Details</h2>
+                <div class="input-group">
+                    <label for="pay-upi">UPI ID</label>
+                    <input type="text" id="pay-upi" placeholder="e.g. 844*******@okicici" required>
+                </div>
+            </div>
+            <!-- GENERATE BUTTON -->
+            <button type="button" id="generate-btn" class="btn-main">Generate My Page</button>
+        </form>
+    </div>
+    <div class="preview-container">
+        <h2>Live Preview</h2>
+        <iframe src="about:blank" id="preview-window"></iframe>
+        <textarea id="final-code-output"></textarea>
+        <button id="copy-btn">Copy Code</button>
+    </div>
+    <script src="generator.js"></script>
 </body>
 </html>
