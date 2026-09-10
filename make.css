@@ -255,3 +255,25 @@ textarea::-webkit-scrollbar-thumb {
 textarea::-webkit-scrollbar-thumb:hover {
     background: var(--accent-gold);
 }
+
+/* --- Back Button --- */
+.btn-back {
+    display: inline-block;
+    margin-bottom: 2rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 400;
+    transition: var(--transition);
+    align-self: flex-start;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    border: 1px solid var(--border-color);
+    background: var(--bg-card);
+}
+
+.btn-back:hover {
+    color: var(--accent-gold);
+    border-color: var(--accent-gold);
+    transform: translateX(-5px);
+}
