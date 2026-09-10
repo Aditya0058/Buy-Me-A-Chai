@@ -439,7 +439,30 @@ body {
     }
 }
 
-        </style>
+            /* --- Custom Premium Scrollbar --- */
+    ::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+    }
+    ::-webkit-scrollbar-track {
+        background: var(--bg-primary);
+        border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: var(--bg-card);
+        border: 2px solid var(--bg-primary);
+        border-radius: 10px;
+        transition: var(--transition);
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: var(--accent-gold);
+        box-shadow: 0 0 10px var(--accent-gold-glow);
+    }
+    html {
+        scrollbar-width: thin;
+        scrollbar-color: var(--bg-card) var(--bg-primary);
+    }
+</style>
     </head>
     <body>
 
