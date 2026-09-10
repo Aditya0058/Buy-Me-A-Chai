@@ -208,3 +208,34 @@ body {
         padding: 1.5rem;
     }
 }
+
+/* --- Custom Premium Scrollbar --- */
+
+/* 1. For Chrome, Edge, and Safari (WebKit) */
+::-webkit-scrollbar {
+    width: 10px; /* Width of the vertical scrollbar */
+    height: 10px; /* Height of the horizontal scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-primary); /* Matches your dark background */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--bg-card); /* Dark gray thumb */
+    border: 2px solid var(--bg-primary); /* Creates a padding effect around the thumb */
+    border-radius: 10px;
+    transition: var(--transition);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-gold); /* Turns gold when you hover over it! */
+    box-shadow: 0 0 10px var(--accent-gold-glow);
+}
+
+/* 2. For Firefox */
+html {
+    scrollbar-width: thin;
+    scrollbar-color: var(--bg-card) var(--bg-primary);
+}
